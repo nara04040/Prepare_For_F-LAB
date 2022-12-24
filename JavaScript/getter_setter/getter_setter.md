@@ -240,3 +240,12 @@ let john = new User("John", new Date(1992, 6, 1));
 alert(john.birthday);
 alert(john.age);
 ```
+
+## 정리
+
+> 정리
+
+getter : property를 읽을때 동작하는 것
+
+setter : property에 값을 쓸 때 호출된다.
+
