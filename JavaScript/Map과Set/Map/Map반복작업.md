@@ -13,6 +13,8 @@ let recipeMap = new Map([
     ['onion', 50]
 ])
 
+// 기본적으로 for.. of 반복문을 사용한다.
+
 // 키(vegetable)을 대상으로 순횐한다.
 for (let vegetable of recipeMap.keys()) {
     console.log(vegetable); // cucumber, tomatoes, onion
