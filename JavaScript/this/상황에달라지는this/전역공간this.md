@@ -52,3 +52,17 @@ var연산자를 이용하여 변수를 선언하더라도 실제 자바스크립
 이후 변수를 호출하면 L.E를 조회하여 일치하는 프로퍼티가 있다면 값을 반환한다.
 
 
+<br>
+ 
+
+ ```js
+ var a = 1;
+window.b = 2;
+console.log(a, window.a, this.a);   // 1 1 1
+console.log(b, window.b, this.b);   // 2 2 2
+
+window.a = 3;
+b = 4;
+console.log(a, window.a, this.a);   // 3 3 3
+console.log(b, window.b, this.b);   // 4 4 4
+ ```
