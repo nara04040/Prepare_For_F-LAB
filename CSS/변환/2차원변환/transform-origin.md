@@ -1,6 +1,6 @@
-CSS3부터는 transform을 사용하여 객체를 변환할 수 있다.
+# transform-origin
 
-<img src="./../img/CSS3변환.png">
+transform-origin속성은 변환 중심을 설정하는 스타일 속성이다.
 
 ```html
 <!DOCTYPE html>
@@ -19,6 +19,7 @@ CSS3부터는 transform을 사용하여 객체를 변환할 수 있다.
                 height:100px;
                 background:red;
                 transform: rotate(60deg);
+                transform-origin: 100% 100%
             }
         </style>
     </head>
@@ -32,7 +33,7 @@ CSS3부터는 transform을 사용하여 객체를 변환할 수 있다.
 
 <br>
 
-위 코드의 결과이다.
+<img src="./../img/transform-origin.png">
 
-<img src="./../img/rotate60결과.png">
+transform-origin을 100% 100%를 줬기에 객체의 오른쪽 아래가 변환 중심이된다. 이후 rotate()함수를 실행하여 위와 같은 결과가 도출된다.
 
