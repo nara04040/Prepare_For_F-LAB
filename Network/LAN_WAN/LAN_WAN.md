@@ -1,6 +1,6 @@
 # LAN과 WAN
 
-<img src="./img/LAN_WAN.png" style="width:500px; height:500px">
+<img src="./img/LAN_WAN.png" style="width:500px; height:600px">
 
 <br>
 
@@ -16,7 +16,7 @@
 
 ## 네트워크란?
 
-<img src="./img/network.png" style="width:500px; height:500px;">
+<img src="./img/network.png" style="width:500px; height:600px;">
 
 <br>
 
@@ -28,7 +28,7 @@
 
 <br>
 
-<img src="./img/LAN.png" style="width:400px; height:400px">
+<img src="./img/LAN.png" style="width:500px; height:600px">
 
 <br>
 
@@ -45,7 +45,7 @@ LAN을 구축하는 장점 자원을 공유할 수 있다는 점.
 
 <br>
 
-<img src="./img/WAN.png" style="width:500px; height:500px">
+<img src="./img/WAN.png" style="width:500px; height:600px">
 
 <br>
 
