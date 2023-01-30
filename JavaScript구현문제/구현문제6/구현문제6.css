@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: var(--ff-secondary);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 1rem;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--clr-grey-9);
+}
+
+.header {
+    min-width: 100vh;
+    height: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.banner {
+    background: var(--clr-white);
+    padding: 4rem 0;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    text-align: center;
+    width: 90vw;
+    max-width: var(--max-width);
+}
+
+.banner h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
+}
+
+.btn {
+    display: inline-block;
+    padding: .75rem .75rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(0, 0, 0 / 20%);
+}
+
+.modal-btn {
+    margin-top: 1.5rem;
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 166, 233, 0.5);
+    transition: var(--transition);
+    visibility: hidden;
+    
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 9;
+}
+
+.modal-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 90vw;
+    height: 30vh;
+    max-width: var(--fixed-width);
+    background: var(--clr-white);
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+.modal-container h3 {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
+    line-height: 1.25;    
+}
+
+.close-btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--clr-red-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover{
+    color: var(--clr-red-light);
+    transform: scale(1.3);
+}
