@@ -95,7 +95,7 @@ const makeMenuButtons = () => {
 
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", (e) => {
-      console.log(e.currentTarget.value);
+      console.log(e.currentTarget.);
     });
   });
   // filterBtns.forEach(function (btn) {
