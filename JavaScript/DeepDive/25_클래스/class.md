@@ -103,3 +103,84 @@ JS에서의 클래스는 사실상 함수이고, 기존의 프로토타입 기�
 
 ## 클래스 정의
 
+<br>
+
+자바스크립트의 클래스는 class키워드로 정의한다.
+
+생성자 함수와 마찬가지로 파스칼 케이스를 사용한다.
+
+```js
+class Person{}
+```
+<br>
+class도 마찬가지로 표현식으로 정의가 가능하다.
+
+```js
+// 익명 클래스 표현식
+const Person = class {};
+
+// 기명 클래스 표현식
+const Person = class MyClass {};
+```
+
+<br>
+표현식으로 정의 할 수 있다라는 말은 클래스가 값으로 사용이 가능하다. 고로 클래스는 "일급객체"이다 라는 것을 의미합니다.
+
+더 자세히 말하자면 JavaScript에서의 **클래스는 함수**입니다. 고로 클래스는 "일급객체"입니다.
+> 일급객체가 가지는 특징
+>
+>  - 무명의 리터럴로 생성 가능하다. -> 런타임에 생성이 가능하다.
+>  - 변수나 자료구조에 저장이 가능하다.
+>  - 함수의 매개변수에 전달이 가능하다.
+>  - 함수의 반환값(return)으로 사용이 가능하다.
+
+<br>
+
+클래스 몸체에는 0개 이상의 메서드만 정의할 수 있습니다.
+
+클래스 몸체에는 **constructor(생성자), 프로토타입 메서드, 정적메서드 ** 가 있습니다.
+
+```js
+// 클래스 선언문
+class Person {
+  // 생성자
+  constructor(name) {
+    // 인스턴스 생성 및 초기화
+    this.name = name; // name 프로퍼티는 public하다.
+  }
+
+  // 프로토타입 메서드
+  sayHi() {
+    console.log(`Hi! My name is ${this.name}`);
+  }
+
+  // 정적 메서드
+  static sayHello() {
+    console.log('Hello!');
+  }
+}
+
+// 인스턴스 생성
+const me = new Person('nara');
+
+// 인스턴스의 프로퍼티 참조
+console.log(me.name); // nara
+// 프로토타입 메서드 호출
+me.sayHi(); // Hi! My name is Lnara
+// 정적 메서드 호출
+Person.sayHello(); // Hello!****
+```
+
+<br>
+
+## 클래스 호이스팅
+
+<br>
+
+JavaScript에서의 클래스는 함수로 평가됩니다.
+
+```js
+class Person{}
+
+console.log(typeof Person) // function
+```
