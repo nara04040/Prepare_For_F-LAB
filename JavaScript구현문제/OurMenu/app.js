@@ -95,7 +95,18 @@ const makeMenuButtons = () => {
 
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", (e) => {
-      console.log(e.currentTarget.);
+      // console.log(e.currentTarget.dataset.id);
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menuApi.filter((menuItem) => {
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+      if (category === "all") {
+        makeMenuItems(menuApi);
+      } else {
+        makeMenuItems(menuCategory);
+      }
     });
   });
   // filterBtns.forEach(function (btn) {

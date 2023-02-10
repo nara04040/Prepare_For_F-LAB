@@ -1,0 +1,1 @@
+target Page : https://vannilla-js-basic-project-10-scroll.netlify.app/
