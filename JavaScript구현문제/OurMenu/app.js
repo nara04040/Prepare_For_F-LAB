@@ -88,6 +88,9 @@ const sectionCenter = document.querySelector(".section-center");
 window.addEventListener("DOMContentLoaded", (e) => {
   makeMenuItems(menuApi);
   makeMenuButtons();
+
+  const queryString = location.search;
+  console.log(queryString);
 });
 
 const makeMenuButtons = () => {
