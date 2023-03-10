@@ -5,7 +5,6 @@ class Dict {
     }
     add(word) {
         if (this.words[word.term] === undefined) {
-            // word의 term에 단어가 없다면
             this.words[word.term] = word.def;
         }
     }
@@ -29,8 +28,16 @@ class Word {
         this.def = def;
     }
 }
-const kimchi = new Word("kimchi", "한국의 음식");
-const pizza = new Word("pizza", "미국의 음식");
+const kimchi = new Word("kimchi", "super cool food");
+const pizza = new Word("pizza", "super nice piazza");
 const dict = new Dict();
 dict.add(kimchi);
 dict.add(pizza);
+console.log("KIMCHI:", dict.def("kimchi"));
+console.log("PIZZA:", dict.def("pizza"));
+dict.update(new Word("kimchi", "very incredible super food"));
+console.log("UPDATE KIMCHI:", dict.def("kimchi"));
+console.log("NOT UPDATE PIZZA:", dict.def("pizza"));
+dict.del("pizza");
+console.log("DELETE PIZZA", dict.def("pizza"));
+console.log("NOT DELETE KIMCHI:", dict.def("kimchi"));
