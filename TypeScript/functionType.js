@@ -1,7 +1,7 @@
-function greeter(fn) {
-    fn("hello, world");
-}
-function printToConsole(s) {
-    console.log(s);
-}
-greeter(printToConsole);
+// function greeter(fn) {
+//     fn("hello, world");
+// }
+// function printToConsole(s) {
+//     console.log(s);
+// }
+// greeter(printToConsole);
