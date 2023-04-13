@@ -1,0 +1,17 @@
+body {
+  margin: 20px;
+}
+
+.square {
+  background-color: white;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
