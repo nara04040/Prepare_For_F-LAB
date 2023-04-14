@@ -8,3 +8,5 @@
 - map파일이란 것은 무엇입니까, 그냥 파일과 차이점은?
 - 데코레이터이란 무엇일까요
 - 믹스인 패턴에 대해서 설명해주세요
+
+정리사이트 : https://velog.io/@jin04040/TypeScript-%EC%A7%88%EB%AC%B8%EB%A6%AC%EC%8A%A4%ED%8A%B8
