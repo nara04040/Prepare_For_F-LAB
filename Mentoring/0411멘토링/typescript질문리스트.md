@@ -1,0 +1,10 @@
+- overloading에 대해서 설명해주세요
+- 타입가드란 무엇일까요
+- as 타입단언
+- enum
+- static
+- 접근 제어자 public protected private
+- extends impliments :
+- map파일?
+- 데코레이터
+- 믹스인 패턴
